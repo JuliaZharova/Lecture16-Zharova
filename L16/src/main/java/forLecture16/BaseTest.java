@@ -1,6 +1,5 @@
 package forLecture16;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -23,11 +22,11 @@ public class BaseTest {
     @DataProvider(name = "validDataForEmailPassword")
     public Object[][] dataForEmailAndPassword() {
         return new Object[][]{
-                {"julia.amp.zharova@gmail.com", "Julia*22"},
+                {"julia.amp.zharova@gmail.com", "QwEr22"},
         };
     }
 
-    @BeforeTest (groups = {"cart", "login"})
+    @BeforeTest(groups = {"cart", "login"})
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         driver = new ChromeDriver();
@@ -35,13 +34,13 @@ public class BaseTest {
         driver.manage().window().maximize();
     }
 
-    @AfterTest (groups = {"cart", "login"})
+    @AfterTest(groups = {"cart", "login"})
     public void setDown() {
         driver.quit();
     }
 
     @BeforeMethod
-            public void beforeMethod(){
+    public void beforeMethod(){
         System.out.println("It's beforeMethod");
     }
 
@@ -49,5 +48,4 @@ public class BaseTest {
     public void beforeSuite(){
         System.out.println("It's beforeSuite");
     }
-
 }

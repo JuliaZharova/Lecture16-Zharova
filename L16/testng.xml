@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="F:/Lecture16/Lecture16-Zharova/Lecture16/src/test/java">
+    <test verbose="2" preserve-order="true" name="F:/Lecture16/Lecture16-Zharova/L16/src/main/java/forLecture16">
         <classes>
             <class name="forLecture16.Test1"></class>
-            <class name="forLecture16.Test2"></class>
         </classes>
-
     </test>
 </suite>

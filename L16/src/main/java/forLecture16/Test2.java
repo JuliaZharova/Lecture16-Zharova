@@ -1,14 +1,14 @@
 package forLecture16;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class Test2 extends BaseTest {
-
-   static SoftAssert softAssertion;
-   @BeforeTest
+public class Test2 extends BaseTest{
+    static SoftAssert softAssertion;
+    @BeforeTest(groups = {"cart"})
     public static void getPageAddProduct() {
         driver.get("https://rozetka.com.ua/207066595/p207066595/");
 
@@ -23,7 +23,7 @@ public class Test2 extends BaseTest {
         System.out.println("Pop-up Cart is displayed: " + popUpCart.isDisplayed());
     }
 
-    @Test (groups = {"cart"})
+    @Test(groups = {"cart"})
     public void addingItemToCart() {
         softAssertion = new SoftAssert();
 
@@ -47,7 +47,7 @@ public class Test2 extends BaseTest {
         System.out.println("This product was successfully added to cart.");
     }
 
-   @Test(groups = {"cart"})
+    @Test(groups = {"cart"})
     public void removeAnItemFromCart(){
         softAssertion = new SoftAssert();
 
@@ -84,4 +84,5 @@ public class Test2 extends BaseTest {
 
         System.out.println("This product was successfully removed from cart.");
     }
+
 }
